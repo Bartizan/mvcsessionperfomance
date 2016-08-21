@@ -29,10 +29,13 @@
                         @Html.ActionLink("Start Session", "StartSession")
                     </li>
                     <li>
-                        <a class="links" ng-click="getBoxes()">Not resolved</a>
+                        <a class="links" ng-click="getBoxes(0)">Not resolved</a>
                     </li>
                     <li>
-                        <a class="links" ng-click="getBoxes(true)">Resolved</a>
+                        <a class="links" ng-click="getBoxes(1)">Resolved</a>
+                    </li>
+                    <li>
+                        <a class="links" ng-click="getBoxes(2)">Resolved (Food for Thought)</a>
                     </li>
                     <li>
                         <form class="navbar-form">
