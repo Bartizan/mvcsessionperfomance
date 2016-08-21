@@ -12,7 +12,7 @@
             var start = new Date();
             var counter = 300;
 
-            
+
             if (1 == resolved)
                 uri = mvcurisessionresolved;
             else if (2 == resolved)
