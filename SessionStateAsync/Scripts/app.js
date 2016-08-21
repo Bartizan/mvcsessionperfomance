@@ -1,7 +1,8 @@
 ﻿angular.module('asyncApp', [])
     .value('mvcuri', 'http://localhost:49588/home/getbox')
     .value('mvcurisessionresolved', 'http://localhost:49588/SessionResolved/getbox')
-    .controller('asyncCtrl', function ($http, $scope, mvcuri, mvcurisessionresolved) {
+    .value('mvcuriresolved2', 'http://localhost:49588/ResolvedWithSessionAccess/getBox')
+    .controller('asyncCtrl', function ($http, $scope, mvcuri, mvcurisessionresolved, mvcuriresolved2) {
 
         $scope.boxes = [];
         $scope.showResults = false;
@@ -11,9 +12,11 @@
             var start = new Date();
             var counter = 300;
 
-            
-            if (resolved)
+
+            if (1 == resolved)
                 uri = mvcurisessionresolved;
+            else if (2 == resolved)
+                uri = mvcuriresolved2;
             else
                 uri = mvcuri;
 
